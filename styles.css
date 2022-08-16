@@ -1,0 +1,282 @@
+@charset "UTF-8";
+/* ここから全体共通部分の装飾 */
+    *{
+        font-size: 100%;
+        /* デフォルトの16pxでの指定 */
+    }
+    body{
+        line-height: 1.8;
+        /* 数値のみで指定すれば、自動で180％や1.8remなどに調整してくれる */
+        color: #343131;
+    }
+    a{
+        text-decoration: none;
+        /* aタグすべての傍線をなくす */
+        color: #343131;
+    }
+    img{
+        max-width: 100%;
+        /* imgの最大幅は画面幅に合わせる(100％) */
+    }
+    .wrapper{
+        max-width: 100%;
+        /* 最大幅を指定。これ以上は大きくならない。縮小時に適正な幅を保ってくれる */
+        margin: 0 auto;
+        padding: 0;
+        /* スマホ向けの余白を指定する */
+    }
+        /* ここからheaderの装飾(OK) */
+            .page-header{
+                background-color: rgb(232, 232, 232);
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                position: fixed;
+                z-index: 90;
+            }
+            .header-title{
+                font-size: 40px;
+                margin-left: 15%;
+            }
+            .page-header nav{
+                align-self: flex-end;
+            }
+            .main-nav{
+                display: flex;
+            }
+            li{
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                text-align: center;
+                padding: 10px;
+            }
+        /* ここまでheaderの装飾 */
+        /* ここから各タイトルの装飾(OK) */
+            .segment-title{
+                /* background-color: cadetblue; */
+                font-size: 40px;
+                margin-left: 40%;
+            }
+            .segment-englishtitle{
+                /* background-color: aquamarine; */
+                /* position: absolute;
+                bottom: 0;
+                margin-left: 65%; */
+                font-size: 20px;
+                padding-left: 10px;
+            }
+        /* ここから各タイトルの装飾 */
+/* ここまで全体共通部分の装飾 */
+/* ここからスライドショーの装飾 */
+    .slide video{
+        width: 100%;
+        margin-top: 75px;
+    }
+/* ここまでスライドショーの装飾 */
+/* ここから施工実績の装飾 */
+    .works{
+        /* background-color: bisque; */
+        position: relative;
+    }
+    .works-title{
+        font-size: 25px;
+        line-height: 1;
+    }
+    /* 背景の設定(OK) */
+        .remodeling-back{
+            position: relative;
+            z-index: 10;
+        }
+        .hole-back{
+            position: relative;
+            top: -100px;
+            z-index: 10;
+        }
+        .recovery-back{
+            position: relative;
+            top: -200px;
+            z-index: 10;
+        }
+    /* 各タイトルの設定 */
+        .remodeling{
+            /* background-color: aquamarine; */
+            position: absolute;
+            top: 4%;
+            left: 63%;
+            z-index: 20;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .hole{
+            /* background-color: aquamarine; */
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            z-index: 20;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .recovery{
+            /* background-color: aquamarine; */
+            position: absolute;
+            top: 60%;
+            left: 63%;
+            z-index: 20;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    /* 画像の設定 */
+        /* remodelingの画像設定 */
+            .remodeling-before{
+                position: absolute;
+                left: 5px;
+                top: 4%;
+                width: 36%;
+                z-index: 30;
+            }
+            .remodeling-progress{
+                position: absolute;
+                left: 36%;
+                top: 10%;
+                width: 30%;
+                z-index: 30;
+            }
+            .remodeling-after{
+                position: absolute;
+                right: 5px;
+                top: 14%;
+                width: 36%;
+                z-index: 30;
+            }
+        /* holeの画像設定 */
+            .hole-before{
+                position: absolute;
+                right: 5px;
+                top: 31%;
+                width: 36%;
+                z-index: 30;
+            }
+            .hole-progress{
+                position: absolute;
+                left: 36%;
+                top: 37%;
+                width: 30%;
+                z-index: 30;
+            }
+            .hole-after{
+                position: absolute;
+                left: 5px;
+                top: 41%;
+                width: 36%;
+                z-index: 30;
+            }
+        /* recoveryの画像設定 */
+            .recovery-before{
+                position: absolute;
+                left: 5px;
+                top: 59%;
+                width: 36%;
+                z-index: 30;
+            }
+            .recovery-progress{
+                position: absolute;
+                left: 36%;
+                top: 65%;
+                width: 30%;
+                z-index: 30;
+            }
+            .recovery-after{
+                position: absolute;
+                right: 5px;
+                top: 69%;
+                width: 36%;
+                z-index: 30;
+            }
+            .grid{
+                height: 0;
+            }
+        /* .grid-r::after{
+            position: absolute;
+            content: "";
+            height: 747px;
+            left: 50%;
+            margin-right: -1500%;
+            background: linear-gradient(blue red);
+        } */
+/* ここまで施工実績の装飾 */
+
+/* ここから施工エリアの装飾 */
+    .area-title{
+        font-size: 25px;
+        line-height: 1.3;
+    }
+    #area{
+        margin-top: -170px;
+    }
+    /* 背景の設定 */
+        .tokyo-area{
+            background-image: url(../image/back-part/tokyo-back.png),
+            url(../image/back-part/tokyo.png);
+            background-position: top right;
+            display: flex;
+            flex-direction: column-reverse;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .kanagawa-area{
+            background-image: url(../image/back-part/kanagawa-back.png),
+            url(../image/back-part/kanagawa.png);
+            background-position: top left;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .title-t{
+            position: absolute;
+            left: 15%;
+            bottom: 20%;
+        }
+        .title-k{
+            position: absolute;
+            left: 38%;
+            bottom: 15%;
+        }
+/* ここまで施工エリアの装飾 */
+
+/* ここから会社情報の装飾 */
+        .company{
+            background-image: url(../image/back/tesukiwashi-pattern-08.jpg);
+            /* background-color: antiquewhite; */
+            position: relative;
+        }
+        .company-back{
+            width: 100%;
+            z-index: 100;
+        }
+        .company .segment-title{
+            margin-top: -70px;
+        }
+        .companyinfo-title{
+            /* font-size: 25px;
+            line-height: 1;
+            position: absolute;
+            left: 20%;
+            margin-top: 20px; */
+        }
+        /* 会社概要 */
+            /* .summary{
+                position: relative;
+            }
+            .company table{
+                position: absolute;
+                top: 80px;
+                left: 50%;
+            } */
+
+/* ここから会社情報の装飾 */
