@@ -222,7 +222,7 @@
         .tokyo-area{
             background-image: url(../image/back-part/tokyo-back.png),
             url(../image/back-part/tokyo.png);
-            background-position: top right;
+            background-position: top left,top right;
             display: flex;
             flex-direction: column-reverse;
             position: relative;
@@ -231,7 +231,7 @@
         .kanagawa-area{
             background-image: url(../image/back-part/kanagawa-back.png),
             url(../image/back-part/kanagawa.png);
-            background-position: top left;
+            background-position: top right,top left;
             display: flex;
             flex-direction: column;
             position: relative;
