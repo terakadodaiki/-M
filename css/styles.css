@@ -27,7 +27,7 @@
     }
         /* ここからheaderの装飾(OK) */
             .page-header{
-                background-color: rgb(232, 232, 232);
+                background-color: rgb(245, 245, 245);
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
@@ -252,8 +252,7 @@
 /* ここから会社情報の装飾 */
         .company{
             background-image: url(../image/back/tesukiwashi-pattern-08.jpg);
-            /* background-color: antiquewhite; */
-            position: relative;
+            background-repeat: repeat-y;
         }
         .company-back{
             width: 100%;
@@ -262,21 +261,54 @@
         .company .segment-title{
             margin-top: -70px;
         }
-        .companyinfo-title{
-            /* font-size: 25px;
-            line-height: 1;
-            position: absolute;
-            left: 20%;
-            margin-top: 20px; */
-        }
+        /* .summary{
+            position: relative;
+        } */
         /* 会社概要 */
-            /* .summary{
-                position: relative;
+            .companyinfo-title{
+                font-size: 25px;
+                line-height: 1;
+                margin: 5% 0 1.5% 13%;
             }
             .company table{
-                position: absolute;
-                top: 80px;
-                left: 50%;
-            } */
-
+                margin: 0 auto;
+                border-collapse:  collapse;
+            }
+            tr:nth-child(odd) {
+                background-color: rgba(100, 100, 100, .5);
+            }
+            td{
+                padding: 15px 30px;
+            }
+        /* 企業理念 */
+            .philosophy-content{
+                /* position: relative; */
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+            .philosophy-content h3{
+                font-size: 20px;
+                margin-bottom: 1%;
+            }
+            .philosophy-content h3{
+                line-height: 1.3;
+            }
+            .philosophy-content div{
+                margin-top: 1.5%;
+            }
+        /* 代表挨拶 */
+            .greeting-content{
+                display: flex;
+                margin-left: 20%;
+                margin-right: 20%;
+                padding-bottom: 5%;
+            }
+            .greeting-content img{
+                margin-right: 10px;
+                width: 40%;
+            }
+            .company-back-down{
+                margin-top: -3%;
+            }
+        /*  */
 /* ここから会社情報の装飾 */
