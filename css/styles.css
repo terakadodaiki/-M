@@ -25,67 +25,355 @@
         padding: 0;
         /* スマホ向けの余白を指定する */
     }
-        /* ここからheaderの装飾(OK) */
-            .page-header{
-                background-color: rgb(245, 245, 245);
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
-                position: fixed;
-                z-index: 90;
-            }
-            .header-title{
-                font-size: 40px;
-                margin-left: 15%;
-            }
-            .page-header nav{
-                align-self: flex-end;
-            }
-            .main-nav{
-                display: flex;
-            }
-            li{
-                display: flex;
-                flex-direction: column;
-                list-style: none;
-                text-align: center;
-                padding: 10px;
-            }
-        /* ここまでheaderの装飾 */
-        /* ここから各タイトルの装飾(OK) */
-            .segment-title{
-                /* background-color: cadetblue; */
-                font-size: 40px;
-                margin-left: 40%;
-            }
-            .segment-englishtitle{
-                /* background-color: aquamarine; */
-                /* position: absolute;
-                bottom: 0;
-                margin-left: 65%; */
-                font-size: 20px;
-                padding-left: 10px;
-            }
-        /* ここから各タイトルの装飾 */
+
+    /* ここから各タイトルの装飾(OK) */
+        .segment-title{
+            /* background-color: cadetblue; */
+            font-size: 40px;
+            margin-left: 40%;
+            /* transform: translateX(-50%);
+            padding-left: 0%; */
+        }
+        .segment-englishtitle{
+            /* background-color: aquamarine; */
+            /* position: absolute;
+            bottom: 0;
+            margin-left: 65%; */
+            font-size: 20px;
+            padding-left: 10px;
+        }
+    /* ここから各タイトルの装飾 */
 /* ここまで全体共通部分の装飾 */
-/* ここからスライドショーの装飾 */
-    .slide video{
+
+/* ここからheaderの装飾(OK) */
+    .page-header{
+        background-color: rgba(228, 228, 228,.9);
         width: 100%;
-        margin-top: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: fixed;
+        z-index: 90;
     }
-/* ここまでスライドショーの装飾 */
-/* ここから施工実績の装飾 */
-    .works{
-        /* background-color: bisque; */
+    .header-title{
+        font-size: 2.5em;
+        margin-left: 60px;
+    }
+    .page-header a{
+        color: rgb(33, 33, 33);
+        /* color: aliceblue; */
+    }
+    .page-header nav{
+        align-self: flex-end;
+    }
+    .main-nav{
+        display: flex;
+    }
+    .main-nav a{
+        padding: 6px;
+        margin-bottom: 0;
+        display: inline-block;
+        margin-block: 2px;
         position: relative;
     }
-    .works-title{
-        font-size: 25px;
-        line-height: 1;
+    .main-nav a::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #161515;
+        /* border-radius: 4px; */
+        left: 0;
+        bottom: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .25s ease;
     }
-    /* 背景の設定(OK) */
-        .remodeling-back{
+    .main-nav li a:hover::after{
+        /* background-color: rgb(33, 33, 33);
+        color: rgb(228, 228, 228); */
+        transform: scaleX(1);
+    }
+    li{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        text-align: center;
+        padding: 10px;
+    }
+/* ここまでheaderの装飾 */
+
+/* ここからトップ画像の装飾 */
+    .toppicture{
+        position: relative;
+    }
+    .toppicture h1{
+        color: antiquewhite;
+        position: absolute;
+        top: 30%;
+        left: 60%;
+    }
+/* ここまでトップ画像の装飾 */
+
+/* ここからスライドショーの装飾 */
+    /* .slide video{
+        width: 100%;
+        margin-top: 75px;
+    } */
+    /* .toppic{
+        height: 100%;
+        margin-top: 20px;
+    } */
+/* ここまでスライドショーの装飾 */
+
+/* ここから施工実績の装飾 */
+    /* ここから共通設定 */
+        .works{
+            /* background-color: bisque; */
+            position: relative;
+        }
+        .rem{
+            background-color: #43A047;
+            position: relative;
+            margin-bottom: 5%;
+            height: 25em;
+        }
+        .anchor{
+            /* ジャンプ時に見出しが見切れない設定 */
+            display: block;
+            padding-top: 70px;
+            margin-top: -70px;
+        }
+        .works-title{
+            font-size: 1.3em;
+            line-height: 1.4em;
+            margin-bottom: 20em;
+        }
+    /* ここまで共通設定 */
+
+    /* ここからジャンプ用のbuttonの装飾 */
+        .jump{
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+            gap: 10px;
+            margin-left: 50%;
+            transform: translateX(-45%);
+            /* background-color: antiquewhite;
+            width: 50%;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto; */
+            position: relative;
+            z-index: 80;
+        }
+        .enroll{
+            /* margin: 2% 2% 2%; */
+            /* margin-top: 20px;
+            margin-bottom: 20px; */
+            transform: skew(-15deg);
+            position: relative;
+            width: 12rem;
+            height: 3rem;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border-radius: 1rem; */
+            background: #a8a8a8;
+            color: #ffffff;
+            transition: all 0.3s;
+        }
+            .enroll:hover{
+                background: transparent;
+                /* letter-spacing: 2px; */
+                    /* ホバー時に文字間広くする */
+                color: #343131;
+            }
+            .enroll::before{
+                top: 0;
+            }
+            .enroll::after{
+                bottom: 0;
+            }
+            .enroll::before,
+            .enroll::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                transform: scaleX(0);
+                width: 100%;
+                height: 0.5px;
+                background: rgb(24, 24, 24);
+                transition: all 0.3s;
+            }
+            .enroll:hover::before,
+            .enroll:hover::after{
+                transform: scaleX(1);
+            }
+    /* ここまでジャンプ用のbuttonの装飾 */
+
+    /* ここから背景の設定 */
+        .parallelogram-wallpaper{
+            width: 100%;
+            margin: 0;
+            padding: 165px 0;
+            position: absolute;
+            top: 70px;
+            /* position: relative;
+            z-index: 10;
+            width: 100%; */
+            /* height: 270px; */
+            /* transform: skew(0deg, 13deg);
+            background: linear-gradient(to right,rgba(88,170,192,.8),rgba(227,213,195,.8));
+            margin-left: 0px;
+            margin-top: 10%; */
+        }
+            .parallelogram-wallpaper::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background:linear-gradient(to right,rgba(88,170,192,.8),rgba(227,213,195,.8));
+                transform: skewY(11deg);
+                z-index: 10;
+            }
+
+        .parallelogram-kitchen{
+            width: 100%;
+            margin: 0;
+            padding: 165px 0;
+            position: absolute;
+            top: 70px;
+            /* position: relative;
+            z-index: 9;
+            width: 100%;
+            height: 270px;
+            transform: skew(0deg, -13deg);
+            background: linear-gradient(to right,rgba(113,144,197,.8),rgba(227,213,195,.8));
+            margin-left: 0px;
+            margin-top: 10%; */
+        }
+            .parallelogram-kitchen::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background:linear-gradient(to right,rgba(113,144,197,.8),rgba(227,213,195,.8));
+                transform: skewY(-11deg);
+                z-index: 10;
+            }
+
+        .parallelogram-bath{
+            width: 100%;
+            margin: 0;
+            padding: 165px 0;
+            position: absolute;
+            /* top: 70px;
+            position: relative;
+            z-index: 8;
+            width: 100%;
+            height: 270px;
+            transform: skew(0deg, 13deg);
+            background: linear-gradient(to right,rgba(113,144,197,.8),rgba(223,155,163,.8));
+            margin-left: 0px;
+            margin-top: 10%; */
+        }
+            .parallelogram-bath::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background:linear-gradient(to right,rgba(113,144,197,.8),rgba(223,155,163,.8));
+                transform: skewY(11deg);
+                z-index: 10;
+            }
+
+        .parallelogram-toilet{
+            width: 100%;
+            margin: 0;
+            padding: 165px 0;
+            position: absolute;
+            /* position: relative;
+            z-index: 7;
+            width: 100%;
+            height: 270px;
+            transform: skew(0deg, -13deg);
+            background: linear-gradient(to right,rgba(113,144,197,.8),rgba(223,155,163,.8));
+            margin-left: 0px;
+            margin-top: 10%; */
+        }
+            .parallelogram-toilet::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background:linear-gradient(to right,rgba(113,144,197,.8),rgba(223,155,163,.8));
+                transform: skewY(-11deg);
+                z-index: 10;
+            }
+
+        .parallelogram-painting{
+            width: 100%;
+            margin: 0;
+            padding: 165px 0;
+            position: absolute;
+            /* position: relative;
+            z-index: 6;
+            width: 100%;
+            height: 270px;
+            transform: skew(0deg, 13deg);
+            background: linear-gradient(to right,rgba(113,144,197,.8),rgba(227,213,195,.8));
+            margin-left: 0px;
+            margin-top: 10%; */
+        }
+            .parallelogram-painting::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background:linear-gradient(to right,rgba(113,144,197,.8),rgba(227,213,195,.8));
+                transform: skewY(11deg);
+                z-index: 10;
+            }
+
+        .parallelogram-anknown{
+            width: 100%;
+            margin: 0;
+            padding: 165px 0;
+            position: absolute;
+            /* position: relative;
+            z-index: 5;
+            width: 100%;
+            height: 270px;
+            transform: skew(0deg, -13deg);
+            background: linear-gradient(to right,rgba(88,170,192,.8),rgba(227,213,195,.8));
+            margin-left: 0px;
+            margin-top: 10%;
+            margin-bottom: 250px; */
+        }
+            .parallelogram-anknown::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background:linear-gradient(to right,rgba(88,170,192,.8),rgba(227,213,195,.8));
+                transform: skewY(-11deg);
+                z-index: 10;
+            }
+        /* .remodeling-back{
             position: relative;
             z-index: 10;
         }
@@ -98,36 +386,66 @@
             position: relative;
             top: -200px;
             z-index: 10;
-        }
-    /* 各タイトルの設定 */
-        .remodeling{
+        } */
+    /* ここから各タイトルの位置の設定 */
+        .wallpaper-rep{
             /* background-color: aquamarine; */
             position: absolute;
             top: 4%;
-            left: 63%;
+            left: 68%;
             z-index: 20;
             white-space: nowrap;
-            overflow: hidden;
+            /* overflow: hidden; */
             text-overflow: ellipsis;
         }
-        .hole{
+        .kitchen-rep{
             /* background-color: aquamarine; */
             position: absolute;
-            top: 30%;
+            top: 4%;
             left: 10%;
             z-index: 20;
             white-space: nowrap;
-            overflow: hidden;
+            /* overflow: hidden; */
             text-overflow: ellipsis;
         }
-        .recovery{
+        .bath-rep{
             /* background-color: aquamarine; */
             position: absolute;
-            top: 60%;
-            left: 63%;
+            top: 4%;
+            left: 68%;
             z-index: 20;
             white-space: nowrap;
-            overflow: hidden;
+            /* overflow: hidden; */
+            text-overflow: ellipsis;
+        }
+        .toilet-rep{
+            /* background-color: aquamarine; */
+            position: absolute;
+            top: 4%;
+            left: 10%;
+            z-index: 20;
+            white-space: nowrap;
+            /* overflow: hidden; */
+            text-overflow: ellipsis;
+        }
+        .painting-rep{
+            /* background-color: aquamarine; */
+            position: absolute;
+            top: 4%;
+            left: 68%;
+            z-index: 20;
+            white-space: nowrap;
+            /* overflow: hidden; */
+            text-overflow: ellipsis;
+        }
+        .anknown-rep{
+            /* background-color: aquamarine; */
+            position: absolute;
+            top: 4%;
+            left: 10%;
+            z-index: 20;
+            white-space: nowrap;
+            /* overflow: hidden; */
             text-overflow: ellipsis;
         }
     /* 画像の設定 */
@@ -142,7 +460,7 @@
             .remodeling-progress{
                 position: absolute;
                 left: 36%;
-                top: 10%;
+                top: 12%;
                 width: 30%;
                 z-index: 30;
             }
@@ -212,40 +530,66 @@
 
 /* ここから施工エリアの装飾 */
     .area-title{
-        font-size: 25px;
+        font-size: 2em;
         line-height: 1.3;
-    }
-    #area{
-        margin-top: -170px;
     }
     /* 背景の設定 */
         .tokyo-area{
-            background-image: url(../image/back-part/tokyo-back.png),
-            url(../image/back-part/tokyo.png);
-            background-position: top left,top right;
-            display: flex;
-            flex-direction: column-reverse;
+            background-image: url(../image/back-part/tokyo.png);
+            background-position: right top;
+            /* display: flex;
+            flex-direction: column-reverse; */
             position: relative;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
+
+        .trapezoid-tokyo {
+            background: linear-gradient(rgba(37,87,129,.8),rgba(182,209,236,.8));
+            position: absolute;
+            z-index: -20;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(0% 100%, 0% 0%, 40% 0%, 80% 100%);
+        }
+
         .kanagawa-area{
-            background-image: url(../image/back-part/kanagawa-back.png),
-            url(../image/back-part/kanagawa.png);
-            background-position: top right,top left;
-            display: flex;
-            flex-direction: column;
+            background-image: url(../image/back-part/kanagawa.png);
+            background-position: top left;
+            /* display: flex;
+            flex-direction: column; */
             position: relative;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
+
+        .trapezoid-kanagawa {
+            background: linear-gradient(rgba(37,87,129,.8),rgba(182,209,236,.8));
+            position: absolute;
+            z-index: -20;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(20% 100%, 60% 0%, 100% 0%, 100% 100%);
+        }
+
         .title-t{
             position: absolute;
-            left: 15%;
-            bottom: 20%;
+            left: 25%;
+            bottom: 8%;
         }
+        .map-t{
+            position: relative;
+            width: 100%;
+            padding-right: 10%;
+        }
+
         .title-k{
             position: absolute;
-            left: 38%;
-            bottom: 15%;
+            left: 45%;
+            bottom: 4%;
+        }
+        .map-k{
+            position: relative;
+            width: 100%;
+            padding-left: 20%;
         }
 /* ここまで施工エリアの装飾 */
 
@@ -253,6 +597,7 @@
         .company{
             background-image: url(../image/back/tesukiwashi-pattern-08.jpg);
             background-repeat: repeat-y;
+            width: 100%;
         }
         .company-back{
             width: 100%;
@@ -311,4 +656,4 @@
                 margin-top: -3%;
             }
         /*  */
-/* ここから会社情報の装飾 */
+/* ここまで会社情報の装飾 */
