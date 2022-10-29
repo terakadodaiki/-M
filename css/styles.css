@@ -753,7 +753,7 @@
     .contact-section{
         position: relative;
         min-height: 100vh;
-        background-image: url(/image/Contact/white-keybord\ pen.jpg);
+        background-image: url(/image/Contact/white-keybord\pen.jpg);
     }
     .contact-card{
         background: rgba(255, 255, 255, 0.7);
