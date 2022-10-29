@@ -27,6 +27,12 @@
     }
 
     /* ここから各タイトルの装飾(OK) */
+        .anchor{
+            /* ジャンプ時に見出しが見切れない設定 */
+            display: block;
+            padding-top: 70px;
+            margin-top: -70px;
+        }
         .segment-title{
             /* background-color: cadetblue; */
             font-size: 40px;
@@ -45,7 +51,7 @@
     /* ここから各タイトルの装飾 */
 /* ここまで全体共通部分の装飾 */
 
-/* ここからheaderの装飾(OK) */
+/* ここからheaderの装飾 */
     .page-header{
         background-color: rgba(228, 228, 228,.9);
         width: 100%;
@@ -107,14 +113,42 @@
     .toppicture{
         position: relative;
     }
-    .toppicture h1{
+    .purpose{
         color: antiquewhite;
+        font-size: 3rem;
         position: absolute;
-        top: 30%;
+        top: 25%;
         left: 60%;
+    }
+    .purpose-method{
+        color: antiquewhite;
+        font-size: 1rem;
+        position: absolute;
+        top: 38%;
+        left: 60%;
+    }
+    .realization{
+        display: inline-block;
+        color: antiquewhite;
+        font-size: 2.4rem;
+        position: absolute;
+        top: 49%;
+        left: 70%;
+        transform: rotate(-15deg);
     }
 /* ここまでトップ画像の装飾 */
 
+/* ここから.flowの装飾 */
+    .flow{
+        position: relative;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .flow-purpase{
+        font-size: 2rem;
+        text-align: center;
+    }
+/* ここまで.flowの装飾 */
 /* ここからスライドショーの装飾 */
     /* .slide video{
         width: 100%;
@@ -133,17 +167,12 @@
             position: relative;
         }
         .rem{
-            background-color: #43A047;
+            /* background-color: #43A047; */
             position: relative;
             margin-bottom: 5%;
             height: 25em;
         }
-        .anchor{
-            /* ジャンプ時に見出しが見切れない設定 */
-            display: block;
-            padding-top: 70px;
-            margin-top: -70px;
-        }
+        
         .works-title{
             font-size: 1.3em;
             line-height: 1.4em;
@@ -217,7 +246,7 @@
         .parallelogram-wallpaper{
             width: 100%;
             margin: 0;
-            padding: 165px 0;
+            padding: 180px 0;
             position: absolute;
             top: 70px;
             /* position: relative;
@@ -244,7 +273,7 @@
         .parallelogram-kitchen{
             width: 100%;
             margin: 0;
-            padding: 165px 0;
+            padding: 180px 0;
             position: absolute;
             top: 70px;
             /* position: relative;
@@ -271,10 +300,10 @@
         .parallelogram-bath{
             width: 100%;
             margin: 0;
-            padding: 165px 0;
+            padding: 180px 0;
             position: absolute;
-            /* top: 70px;
-            position: relative;
+            top: 70px;
+            /* position: relative;
             z-index: 8;
             width: 100%;
             height: 270px;
@@ -298,8 +327,9 @@
         .parallelogram-toilet{
             width: 100%;
             margin: 0;
-            padding: 165px 0;
+            padding: 180px 0;
             position: absolute;
+            top: 70px;
             /* position: relative;
             z-index: 7;
             width: 100%;
@@ -324,8 +354,9 @@
         .parallelogram-painting{
             width: 100%;
             margin: 0;
-            padding: 165px 0;
+            padding: 180px 0;
             position: absolute;
+            top: 70px;
             /* position: relative;
             z-index: 6;
             width: 100%;
@@ -350,8 +381,9 @@
         .parallelogram-anknown{
             width: 100%;
             margin: 0;
-            padding: 165px 0;
+            padding: 180px 0;
             position: absolute;
+            top: 70px;
             /* position: relative;
             z-index: 5;
             width: 100%;
@@ -449,83 +481,139 @@
             text-overflow: ellipsis;
         }
     /* 画像の設定 */
-        /* remodelingの画像設定 */
-            .remodeling-before{
+        /* wallpaperの画像設定 */
+            .wallpaper-before{
                 position: absolute;
                 left: 5px;
                 top: 4%;
                 width: 36%;
                 z-index: 30;
             }
-            .remodeling-progress{
+            .wallpaper-progress{
                 position: absolute;
                 left: 36%;
-                top: 12%;
-                width: 30%;
+                top: 29%;
+                width: 28%;
                 z-index: 30;
             }
-            .remodeling-after{
+            .wallpaper-after{
                 position: absolute;
                 right: 5px;
-                top: 14%;
+                top: 35%;
                 width: 36%;
                 z-index: 30;
             }
-        /* holeの画像設定 */
-            .hole-before{
+        /* kitchenの画像設定 */
+            .kitchen-before{
                 position: absolute;
                 right: 5px;
-                top: 31%;
+                top: 4%;
                 width: 36%;
                 z-index: 30;
             }
-            .hole-progress{
+            .kitchen-progress{
                 position: absolute;
                 left: 36%;
-                top: 37%;
-                width: 30%;
+                top: 29%;
+                width: 28%;
                 z-index: 30;
             }
-            .hole-after{
+            .kitchen-after{
                 position: absolute;
                 left: 5px;
-                top: 41%;
+                top: 35%;
                 width: 36%;
                 z-index: 30;
             }
-        /* recoveryの画像設定 */
-            .recovery-before{
+        /* bathの画像設定 */
+            .bath-before{
                 position: absolute;
                 left: 5px;
-                top: 59%;
+                top: 4%;
                 width: 36%;
                 z-index: 30;
             }
-            .recovery-progress{
+            .bath-progress{
                 position: absolute;
                 left: 36%;
-                top: 65%;
-                width: 30%;
+                top: 29%;
+                width: 28%;
                 z-index: 30;
             }
-            .recovery-after{
+            .bath-after{
                 position: absolute;
                 right: 5px;
-                top: 69%;
+                top: 35%;
                 width: 36%;
                 z-index: 30;
             }
-            .grid{
-                height: 0;
+        /* toiletの画像設定 */
+            .toilet-before{
+                position: absolute;
+                right: 5px;
+                top: 4%;
+                width: 36%;
+                z-index: 30;
             }
-        /* .grid-r::after{
-            position: absolute;
-            content: "";
-            height: 747px;
-            left: 50%;
-            margin-right: -1500%;
-            background: linear-gradient(blue red);
-        } */
+            .toilet-progress{
+                position: absolute;
+                left: 36%;
+                top: 29%;
+                width: 28%;
+                z-index: 30;
+            }
+            .toilet-after{
+                position: absolute;
+                left: 5px;
+                top: 35%;
+                width: 36%;
+                z-index: 30;
+            }
+        /* paintingの画像設定 */
+            .painting-before{
+                position: absolute;
+                left: 5px;
+                top: 4%;
+                width: 36%;
+                z-index: 30;
+            }
+            .painting-progress{
+                position: absolute;
+                left: 36%;
+                top: 29%;
+                width: 28%;
+                z-index: 30;
+            }
+            .painting-after{
+                position: absolute;
+                right: 5px;
+                top: 35%;
+                width: 36%;
+                z-index: 30;
+            }
+        /* anknownの画像設定 */
+            .anknown-before{
+                position: absolute;
+                right: 5px;
+                top: 4%;
+                width: 36%;
+                z-index: 30;
+            }
+            .anknown-progress{
+                position: absolute;
+                left: 36%;
+                top: 29%;
+                width: 28%;
+                z-index: 30;
+            }
+            .anknown-after{
+                position: absolute;
+                left: 5px;
+                top: 35%;
+                width: 36%;
+                z-index: 30;
+            }
+
 /* ここまで施工実績の装飾 */
 
 /* ここから施工エリアの装飾 */
@@ -533,9 +621,12 @@
         font-size: 2em;
         line-height: 1.3;
     }
+    .area-blank{
+        margin-top: 6%;
+    }
     /* 背景の設定 */
         .tokyo-area{
-            background-image: url(../image/back-part/tokyo.png);
+            background-image: url(../image/Construction\ area/tokyo.png);
             background-position: right top;
             /* display: flex;
             flex-direction: column-reverse; */
@@ -553,7 +644,7 @@
         }
 
         .kanagawa-area{
-            background-image: url(../image/back-part/kanagawa.png);
+            background-image: url(../image/Construction\ area/kanagawa.png);
             background-position: top left;
             /* display: flex;
             flex-direction: column; */
@@ -657,3 +748,66 @@
             }
         /*  */
 /* ここまで会社情報の装飾 */
+
+/* ここからお問合せの装飾 */
+    .contact-section{
+        position: relative;
+        min-height: 100vh;
+        background-image: url(/image/Contact/white-keybord\ pen.jpg);
+    }
+    .contact-card{
+        background: rgba(255, 255, 255, 0.6);
+        width: 50%;
+        position: absolute;
+        top: 10%;
+        padding: 5%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        backdrop-filter: blur(1px);
+        border: 3px solid rgba(2, 2, 2, 0.4);
+        border-right-color: rgba(12, 12, 12, 0.2);
+        border-bottom-color: rgba(14, 14, 14, 0.2);
+    }
+    .contact-segment{
+        /* display: flex; */
+        margin-top: 10px;
+    }
+    .contact-segment input,textarea{
+        border: .8px solid #343131;
+        margin: 0 7% 0;
+    }
+    .contact-place input{
+        margin: 0;
+    }
+    .contact-place label{
+        margin-left: 7%;
+    }
+    .contact-submit input{
+        padding: 0 3%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .contact-submit input:hover{
+        background-color: #161515;
+        color: aliceblue;
+    }
+
+/* ここまでお問合せの装飾 */
+
+/* ここからfooterの装飾 */
+    .page-footer{
+        background-color: rgba(228, 228, 228,.9);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        z-index: 90;
+        margin-top: 25px;
+        position: relative;
+    }
+    .copy{
+        position: absolute;
+        right: 10px;
+        bottom: 2px;
+    }
+/* ここまでfooterの装飾 */
